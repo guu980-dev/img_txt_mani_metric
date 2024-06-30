@@ -1,22 +1,68 @@
 import os, json, argparse
-from diffusers import StableDiffusionPipeline
+from diffusers import DiffusionPipeline, StableDiffusionXLPipeline, StableDiffusionXLImg2ImgPipeline
 from dotenv import load_dotenv
 import torch
+from huggingface_hub import login, hf_hub_download
 
 def create_by_sd(prompt, image_path):
   load_dotenv()
   print("CUDA_VISIBLE_DEVICES:", os.getenv("CUDA_VISIBLE_DEVICES"))
 
-  model_id = "stabilityai/stable-diffusion-2-1"
+  # Hugging Face Hub 토큰으로 로그인
+  hf_token = os.getenv("HUGGINGFACE_TOKEN")
+  if hf_token:
+      login(token=hf_token)
+
+  base_model_id = "stabilityai/stable-diffusion-xl-base-1.0"
+  refiner_model_id = "stabilityai/stable-diffusion-xl-refiner-1.0"
   device = "cuda" if torch.cuda.is_available() else "cpu"
 
-  pipe = StableDiffusionPipeline.from_pretrained(model_id)
-  pipe = pipe.to(device)
+  # 로컬 경로에서 모델 로드
+  base_pipe = DiffusionPipeline.from_pretrained(
+    base_model_id, torch_dtype=torch.float16, variant="fp16", use_safetensors=True
+  )
+  base_pipe.to(device)
 
-  with torch.autocast("cuda"):
-    image = pipe(prompt).images[0]
+  refiner_pipe = DiffusionPipeline.from_pretrained(
+    refiner_model_id,
+    text_encoder_2=base_pipe.text_encoder_2,
+    vae=base_pipe.vae,
+    torch_dtype=torch.float16,
+    use_safetensors=True,
+    variant="fp16",
+  )
+  refiner_pipe.to(device)
+  # base_pipe = StableDiffusionXLPipeline.from_pretrained(base_model_id, torch_dtype=torch.float32)
+  # base_pipe = base_pipe.to(device)
 
-  image.save(image_path)
+  # refiner_pipe = StableDiffusionXLImg2ImgPipeline.from_pretrained(refiner_model_id, torch_dtype=torch.float32)
+  # refiner_pipe = refiner_pipe.to(device)
+
+  # 초기 이미지 생성
+# image = base(
+#     prompt=prompt,
+#     num_inference_steps=40,
+#     denoising_end=0.8,
+#     output_type="latent",
+# ).images
+# image = refiner(
+#     prompt=prompt,
+#     num_inference_steps=40,
+#     denoising_start=0.8,
+#     image=image,
+# ).images[0]
+# image
+
+  base_image = base_pipe(prompt).images[0]
+
+  torch.cuda.empty_cache()  # 메모리 비우기
+
+  # Refiner를 사용하여 이미지 개선
+  refined_image = refiner_pipe(prompt=prompt, image=base_image).images[0]
+
+  refined_image.save(image_path)
+
+
 
 def generate_image(data_path, save_base_dir, data_name):
   skipped_log_path = os.path.join(save_base_dir, f'{data_name}_skipped_log.txt')
@@ -38,11 +84,9 @@ def generate_image(data_path, save_base_dir, data_name):
 
       try:
         print(f"generate image: {image_name}")
-        image = create_by_sd(prompt, image_path)
-        if image:
-          image.save(image_path)
-        else:
-          raise RuntimeError("Failed to generate image (Image None)")
+        create_by_sd(prompt, image_path)
+        # else:
+        #   raise RuntimeError("Failed to generate image (Image None)")
       except RuntimeError as e:
         with open(error_log_path, 'a', encoding='utf-8') as error_file:
           error_file.write(f"Failed on image {image_name}: {str(e)}\n")
