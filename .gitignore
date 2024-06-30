@@ -1,5 +1,5 @@
 .venv/
 .DS_Store
 .env
-image_retreival/data/
-image_retrieval/result/
+data/
+result/
