@@ -38,11 +38,7 @@ def generate_image(data_path, save_base_dir, data_name):
 
       try:
         print(f"generate image: {image_name}")
-        image = create_by_sd(prompt, image_path)
-        if image:
-          image.save(image_path)
-        else:
-          raise RuntimeError("Failed to generate image (Image None)")
+        create_by_sd(prompt, image_path)
       except RuntimeError as e:
         with open(error_log_path, 'a', encoding='utf-8') as error_file:
           error_file.write(f"Failed on image {image_name}: {str(e)}\n")
