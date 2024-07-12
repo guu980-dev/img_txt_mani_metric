@@ -406,12 +406,7 @@ def get_source_desc_prompt(prompt_option, source_caption, source_text, target_te
 
 
 def generate_descs_source(source_caption, source_text, target_text, source_object, source_image, args):
-    # if args.use_image_for_desc:
-    #     messages = get_image_desc_prompt(args.prompt_option, source_caption, source_text, target_text, source_object, source_image)
-    # else:
-    #     messages = get_non_image_desc_prompt(args.prompt_option, source_caption, source_text, target_text, source_object)
     messages = get_source_desc_prompt(args.prompt_option, source_caption, source_text, target_text, source_object)
-
 
     completion = client.chat.completions.create(
         model='gpt-3.5-turbo', 
@@ -427,175 +422,6 @@ def generate_descs_source(source_caption, source_text, target_text, source_objec
     processed_desc_list = [desc.split(":")[-1].strip() for desc in desc_list]
     return processed_desc_list
 
-# def generate_descs_target(source_caption, source_text, target_text, source_object, target_object, args):
-#     if args.prompt_option==0:
-#         messages=[
-#             {
-#                 "role": "system", 
-#                 "content": f"Give me a python list of 30 visual characteristics \
-#                     describes {target_text}."
-#             },
-#             {
-#                 "role": "user", 
-#                 "content": "Return python list of that 30 text \
-#                     descriptions that depict a photo of a fluffy brown coated dog"
-#             },
-#             {"role": "assistant", "content": 
-#                         """
-#                         [
-#                             "Furry coat",
-#                             "Four legs",
-#                             "Tail wagging",
-#                             "Barking",
-#                             "Playful behavior",
-#                             "Snout",
-#                             "Collar",
-#                             "Leash",
-#                             "Walking on all fours",
-#                             "Wagging tail",
-#                             ]
-#                         """ 
-#             }
-#             ,
-#             {
-#                 "role": "user", 
-#                 "content": f"Give me a python list of 30 visual characteristics \
-#                     describes {target_text}."}
-#         ]
-    
-#     elif args.prompt_option==1:
-#         question = f"""
-#             Given the source text and target text, give me a python list of 30 visual characteristics that a target might have. 
-#             Note that you should extract the characteristics of only the target compared to the source.
-#             The visual features must be easy to portray: color, texture, shape, material, objects that are seen together, usage and etc.
-#             For example, 
-#             1. Source: "a photo of a dog", Target: "a photo of a cat", answer: ["Slanted almond-shaped eyes", "Soft and fluffy fur coat", "Long and elegant whiskers", "Pointed ears with tufts of fur", "Graceful and agile movements", ...]
-#             2. Source: "a photo of a horse", Target: "A photo of a breakdancing horse", answer: ["Windmill", "Twisting body", "Fur and ears flowing", ...]
-
-#             Source: {source_text}
-#             Target: {target_text}
-#             The answer is:
-#             """
-#         messages = [{"role": "user", "content": question}]
-        
-#     elif args.prompt_option==2:
-#         question = f"""
-#             Given the source text and target text, give me a python list of 30 visual characteristics that describes the target. 
-#             Note that it is important to extract visual features that well represent the characteristics of the target in comparison to the source.
-#             For example, 
-#             1. Source: "a photo of a dog", Target: "a photo of a cat", answer: ["Slanted almond-shaped eyes", "Fluffy fur coat", "Long and elegant whiskers", "Pointed ears", "Graceful and agile movements", ...]
-#             2. Source: "a photo of a horse", Target: "A photo of a breakdancing horse", answer: ["Twisting body", "Bending knees", "Fur in motion", "Head tilted", ...]
-
-#             Source: {source_text}
-#             Target: {target_text}
-#             The answer is:
-#             """
-#         messages = [{"role": "user", "content": question}]
-   
-#     elif args.prompt_option==3:
-        
-#         messages = [
-#             {
-#                 "role": "system", 
-#                 "content": f"""
-#                             Provide image level characteristics 
-#                             such as color, texture, object category information, 
-#                             context of appearance, background 
-#                             of a given text that represents the image.
-#                             """
-#             },
-#             {
-#                 "role": "user", 
-#                 "content": f"""
-#                             Given a sentence, analyze the 
-#                             visual characteristics of the image where 'A dog is breakdancing',
-#                             that is not shown in the image of 'A dog is sitting'.
-#                             For example, focus on the how breakdancing is different from sitting only and do not mention dog's appearance.
-#                             Rearrange into a python list format.
-#                             """
-#             },
-#             {"role": "assistant", 
-#             "content": 
-#                         """
-#                         [
-#                             "motion: A dog shows dynamic movement",
-#                             "motion: A dog is spinning on its head", 
-#                             "environment: A dog is dancing on dance floor",
-#                             "environment: A dog is dancing in a hip hop scene",
-#                             "appearance: A dog shows stylish dancer outfit", 
-#                             "appearance: A dog has its legs up in the air",
-#                         ]
-#                         """ 
-#             },
-#             {
-#                 "role": "user", 
-#                 "content": f"""
-#                 Given a sentence, analyze the 
-#                 visual characteristics of the image where {target_text},
-#                 that is not shown in the image of {source_text}.
-#                 Rearrange into a python list format.
-#                 """
-#             }
-#         ]
-#     elif args.prompt_option==4:
-        
-#         messages = [
-#             {
-#                 "role": "system", 
-#                 "content": f"""
-#                             Provide image level visual characteristics 
-#                             such as color, texture, object category information, 
-#                             context of appearance, background 
-#                             of a given text that represents the image.
-#                             """
-#             },
-#             {
-#                 "role": "user", 
-#                 "content": f"""
-#                             Given a sentence, analyze the 
-#                             visual characteristics of the image where 'A dog is breakdancing',
-#                             that is not shown in the image of 'A dog is sitting'.
-#                             For example, focus on the how breakdancing is different from sitting only and do not mention dog's appearance.
-#                             Rearrange into a python list format.
-#                             """
-#             },
-#             {"role": "assistant", 
-#             "content": 
-#                         """
-#                         [
-#                             "motion: A dog shows dynamic movement",
-#                             "motion: A dog is spinning on its head", 
-#                             "environment: A dog is dancing on dance floor",
-#                             "environment: A dog is dancing in a hip hop scene",
-#                             "appearance: A dog shows stylish dancer outfit", 
-#                             "appearance: A dog has its legs up in the air",
-#                         ]
-#                         """ 
-#             },
-#             {
-#                 "role": "user", 
-#                 "content": f"""
-#                 Given a sentence, analyze the 
-#                 visual characteristics of the image where {target_text},
-#                 that is not shown in the image of {source_text}.
-#                 Rearrange into a python list format.
-#                 """
-#             }
-#         ]
-    
-#     completion = client.chat.completions.create(
-#         model='gpt-3.5-turbo', 
-#         messages=messages,
-#         temperature=args.temp,
-#         frequency_penalty=args.freq_pen,
-#     )
-#     x = str(completion.choices[0].message.content)
-#     s_idx, e_idx = x.find("["), x.find("]")
-#     desc_list = x[s_idx+1: e_idx].split(",")
-#     desc_list = [desc.strip()[1:-1] for desc in desc_list if len(desc.strip()[1:-1])]
-#     processed_desc_list = [desc.split(":")[-1].strip() for desc in desc_list]
-#     return processed_desc_list
-
 
 def calculate_text_sim(model, preprocess, image_path, text, args):
     image = preprocess(Image.open(image_path)).unsqueeze(0).to(args.device)
@@ -608,22 +434,6 @@ def calculate_text_sim(model, preprocess, image_path, text, args):
     text_features /= text_features.norm(dim=-1, keepdim=True)
     similarity = (image_features @ text_features.T).item()
     return similarity
-
-# # with mean text embedding
-# def calculate_descs_sim(model, preprocess, image_path, _descs, args):
-#     image = preprocess(Image.open(image_path)).unsqueeze(0).to(args.device)
-#     # descs = clip.tokenize(_descs).to(args.device)
-#     descs = clip.tokenize([f"Image with {', '.join(_descs)}"]).to(args.device)
-#     with torch.no_grad():
-#         image_features = model.encode_image(image)
-#         descs_features = model.encode_text(descs)
-
-#     image_features /= image_features.norm(dim=-1, keepdim=True)
-#     descs_features /= descs_features.norm(dim=-1, keepdim=True)
-    
-#     similarities = (image_features @ descs_features.T).squeeze(0)
-#     average_similarity = similarities.mean().item()
-#     return average_similarity
 
 
 # with mean text embedding
@@ -648,7 +458,6 @@ def calculate_descs_sim(model, preprocess, image_path, _descs, args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", type=str, default="sameswap", choices=["sameswap", "CelebA", "tedbench"])
-    # parser.add_argument("--data_dir", type=str, default="/home/server08/yoonjeon_workspace/augclip_data/")
     parser.add_argument("--data_dir", type=str, default="/home/server21/hdd/hyunkoo_workspace/data/")
     parser.add_argument("--freq_pen", type=float, default=0.)
     parser.add_argument("--prompt_option", type=int, default=2)
@@ -660,9 +469,6 @@ if __name__ == "__main__":
     args.trial = f"trial{args.prompt_option}_fpen{args.freq_pen}_temp{args.temp}"
     os.makedirs(f"{args.trial}/", exist_ok=True)
     model = "kosmos"
-
-    # if args.dataset == "sameswap":
-    #     args.use_image_for_desc = True
 
     edit_prompt_path = str(Path(args.data_dir) / f"{args.dataset}/edit_prompt_new.json")
     edit_data= read_json(edit_prompt_path)
@@ -728,10 +534,6 @@ if __name__ == "__main__":
         desc_sims.append(descs_sim)
         if descs_sim > text_sim:
             desc_win_rate += 1
-
-        # if output_name not in descs_tgt:
-        #     desc = generate_descs_target(caption, src_prompt, tgt_prompt, src_obj, tgt_obj, args)
-        #     descs_tgt[output_name] = desc
         
     now = datetime.datetime.now()
     descs_src["E_cs_img_descs"] = sum(desc_sims) / len(desc_sims)
