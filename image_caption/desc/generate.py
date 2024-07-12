@@ -23,7 +23,7 @@ client = OpenAI()
 from utils import *   
 
 
-def generated_captions(model, processor, image, prompt):
+def generated_captions(model, processor, image, prompt, prompt_post_processor, src_obj, src_prompt):
     inputs = processor(text=prompt, images=image, return_tensors="pt").to("cuda:0")
     generated_ids = model.generate(
         pixel_values=inputs["pixel_values"],
@@ -36,10 +36,12 @@ def generated_captions(model, processor, image, prompt):
     )
     generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
     caption, entities = processor.post_process_generation(generated_text)
-    return caption, entities
+    post_processed_caption = prompt_post_processor(caption, src_obj, src_prompt)
+    
+    return prompt_post_processor(caption, src_obj, src_prompt), entities
 
-def get_source_desc_prompt(prompt_option, source_caption, source_text, target_text, source_object):
-    if prompt_option==0:
+def get_source_desc_prompt(desc_prompt_option, source_caption, source_text, target_text, source_object):
+    if desc_prompt_option==0:
         #! 30 visual characteristics from image caption
         messages=[
             {
@@ -75,7 +77,7 @@ def get_source_desc_prompt(prompt_option, source_caption, source_text, target_te
                     describes {source_caption}."}
         ]
     
-    elif prompt_option==1:
+    elif desc_prompt_option==1:
         #! Get visual characteristics in source image caption compared to the target text
         
         messages=[
@@ -119,7 +121,7 @@ def get_source_desc_prompt(prompt_option, source_caption, source_text, target_te
             """
         messages = [{"role": "user", "content": question}]
 
-    elif prompt_option==2:
+    elif desc_prompt_option==2:
         messages = [
             {
                 "role": "system", 
@@ -160,7 +162,7 @@ def get_source_desc_prompt(prompt_option, source_caption, source_text, target_te
                             """
             }
         ]
-    elif prompt_option==3:
+    elif desc_prompt_option==3:
         messages = [
             {
                 "role": "system", 
@@ -211,8 +213,8 @@ def get_source_desc_prompt(prompt_option, source_caption, source_text, target_te
             }
         ]
 
-    # 4: Visual 요소에 집중해라. Compare 을 위함이라는 목적을 제시. (차이 미비)
-    elif prompt_option==4:
+    # 4+0: Visual 요소에 집중해라. Compare 을 위함이라는 목적을 제시. (차이 미비)
+    elif desc_prompt_option==4:
         messages = [
             {
                 "role": "system", 
@@ -258,8 +260,8 @@ def get_source_desc_prompt(prompt_option, source_caption, source_text, target_te
             }
         ]
 
-    # 5: 카테고리를 나눠 뽑아라
-    elif prompt_option==5:
+    # 5+0: 카테고리를 나눠 뽑아라
+    elif desc_prompt_option==5:
         messages = [
             {
                 "role": "system", 
@@ -329,8 +331,8 @@ def get_source_desc_prompt(prompt_option, source_caption, source_text, target_te
             }
         ]
     
-    # 6: 예시 수정
-    elif prompt_option==6:
+    # 6+0: 5번에서 예시 수정
+    elif desc_prompt_option==6:
         messages = [
             {
                 "role": "system", 
@@ -399,14 +401,65 @@ def get_source_desc_prompt(prompt_option, source_caption, source_text, target_te
     
     # 6+Captioning 을 좀더 자세하게?
     
-    # 7: 일단 카테고리에 따라 주루룩 나열하고(as detail as possible) 중요도에 따라 선별해라? (소거법)
+    # 7+1: 자세하게 caption 뽑고 그중에서 이미지의 시각적 특징을 잘나타내는 핵심적인 특징들을 뽑아라
+    elif desc_prompt_option==7:
+        messages = [
+                {
+                    "role": "system", 
+                    "content": f"""
+                                Extract important key visual descriptions of the sentence.
+                                Main entity should be highlighted and described in detail.
+                                """
+                },
+                {
+                    "role": "user", 
+                    "content": f"""
+                                Given a sentence 
+                                'red haired girl in the image has visual features like curly hair, wearing a hat and blue pajamas and holding a cup of coffee, 
+                                while a black haired woman is wearing black suit and writing down notes. They are both in a cafe, sitting around a round table'
+                                Extract all descriptions in six categories and pay more attention on the main entity 'red haired girl'.
+                                Then given the descsriptions, augment the given descriptions into a sub-categories of visual characteristics.
+                                """
+                },
+                {"role": "assistant", 
+                "content": 
+                            """
+                            descs: [
+                                "Red-haired girl has curly hair.",
+                                "Red-haired girl is wearing a hat.",
+                                "Red-haired girl is wearing blue pajamas",
+                                "Red-haired girl is holding a cup of coffee.",
+                                "Black-haired woman has black hair.",
+                                "Black-haired woman is wearing a black suit.",
+                                "Black-haired woman is writing down notes.",
+                                "Red-haired girl has red hair.",
+                                "Red-haired girl and black-haired woman are sitting around a round table.",
+                                "Red-haired girl and black-haired woman are both in a cafe.",
+                            ]
+                            """ 
+                },
+                {
+                    "role": "user", 
+                    "content": f"""
+                                Given a sentence 
+                                '{source_caption}'
+                                
+                                Extract important key visual descriptions of the sentence.
+                                Main entity '{source_object}' should be highlighted and described in detail.
+
+                                """
+                }
+            ]
+        
     
+    # 6+2: Caption 을 자세하게 6가지 카테고리로 나눠서 뽑기 desc 도 6가지 카테고리로 나눠서 자세하게 뽑아라
+    # 7+2: Caption 을 자세하게 6가지 타게로리 뽑고 이미지의 시각적 특징을 잘 나타내는 핵심적인 특징들을 뽑아라
     
     return messages
 
 
 def generate_descs_source(source_caption, source_text, target_text, source_object, source_image, args):
-    messages = get_source_desc_prompt(args.prompt_option, source_caption, source_text, target_text, source_object)
+    messages = get_source_desc_prompt(args.desc_prompt_option, source_caption, source_text, target_text, source_object)
 
     completion = client.chat.completions.create(
         model='gpt-3.5-turbo', 
@@ -423,15 +476,26 @@ def generate_descs_source(source_caption, source_text, target_text, source_objec
     return processed_desc_list
 
 
-def calculate_text_sim(model, preprocess, image_path, text, args):
+def calculate_text_sim(model, preprocess, image_path, _text, args):
     image = preprocess(Image.open(image_path)).unsqueeze(0).to(args.device)
-    text = clip.tokenize([text]).to(args.device)
-    with torch.no_grad():
-        image_features = model.encode_image(image)
-        text_features = model.encode_text(text)
-    
+    try:
+        text = clip.tokenize([_text]).to(args.device)
+        with torch.no_grad():
+            image_features = model.encode_image(image)
+            text_features = model.encode_text(text)
+        text_features /= text_features.norm(dim=-1, keepdim=True)
+    except Exception as e:
+        tokenized_text = _text.split('. ')
+        text = clip.tokenize([sentence+'.'  for sentence in tokenized_text]).to(args.device)
+        with torch.no_grad():
+            image_features = model.encode_image(image)
+            _text_features = model.encode_text(text)
+        _text_features /= _text_features.norm(dim=-1, keepdim=True)
+        text_features = _text_features.mean(dim=0, keepdim=True)
+        text_features /= text_features.norm(dim=-1, keepdim=True)
+
     image_features /= image_features.norm(dim=-1, keepdim=True)
-    text_features /= text_features.norm(dim=-1, keepdim=True)
+    
     similarity = (image_features @ text_features.T).item()
     return similarity
 
@@ -460,13 +524,15 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, default="sameswap", choices=["sameswap", "CelebA", "tedbench"])
     parser.add_argument("--data_dir", type=str, default="/home/server21/hdd/hyunkoo_workspace/data/")
     parser.add_argument("--freq_pen", type=float, default=0.)
-    parser.add_argument("--prompt_option", type=int, default=2)
+    parser.add_argument("--desc_prompt_option", type=int, default=2)
+    parser.add_argument("--cap_prompt_option", type=int, default=0)
     parser.add_argument("--temp", type=float, default=0.)
     parser.add_argument("--device", type=str, default="cuda:0")
     parser.add_argument("--crop_image", type=bool, default=False)
+    parser.add_argument("--refresh_caption", type=bool, default=False)
     args = parser.parse_args()
     
-    args.trial = f"trial{args.prompt_option}_fpen{args.freq_pen}_temp{args.temp}"
+    args.trial = f"trial{args.desc_prompt_option}|{args.cap_prompt_option}_fpen{args.freq_pen}_temp{args.temp}"
     os.makedirs(f"{args.trial}/", exist_ok=True)
     model = "kosmos"
 
@@ -490,9 +556,38 @@ if __name__ == "__main__":
         model = AutoModelForVision2Seq.from_pretrained("microsoft/kosmos-2-patch14-224").to(args.device)
 
     prompt_dict = {
-        "CelebA": (lambda src_obj, src_prompt: f"<grounding>An image has facial features like {src_prompt}, "),
-        "sameswap": (lambda src_obj, src_prompt: f"<grounding>An image of {src_obj} "),
-        "tedbench": (lambda src_obj, src_prompt: f"<grounding>An image of {src_obj} "),
+        "0": {
+            "CelebA": (lambda src_obj, src_prompt: f"<grounding>An image has facial features like {src_prompt}, "),
+            "sameswap": (lambda src_obj, src_prompt: f"<grounding>An image of {src_obj} "),
+            "tedbench": (lambda src_obj, src_prompt: f"<grounding>An image of {src_obj} "),
+        },
+        "1": {
+            "CelebA": (lambda src_obj, src_prompt: f"<grounding>Descirbe this image of {src_obj} which has facial features like {src_prompt} in detail: "),
+            "sameswap": (lambda src_obj, src_prompt: f"<grounding>Describe this image of {src_obj} in detail: "),
+            "tedbench": (lambda src_obj, src_prompt: f"<grounding>Describe this image of {src_obj} in detail: "),
+        },
+        "2": {
+            "CelebA": (lambda src_obj, src_prompt: f"<grounding>Descirbe this image of {src_obj} which has facial features like {src_prompt} in detail. It should cosider Landscape and Background(Natural Elements, Man-made Structures, Weather and Time), Subjects(People, Animals, Objects), Appearance(Physical Characteristics, Actions and Poses, Clothing and Accessories), Emotion and Atmosphere(Expressions and Emotions, Mood and Tone), Colors and Lighting(Colors, Lighting), Composition(Arrangement, Perspective): "),
+            "sameswap": (lambda src_obj, src_prompt: f"<grounding>Describe this image of {src_obj} in detail. It should cosider Landscape and Background(Natural Elements, Man-made Structures, Weather and Time), Subjects(People, Animals, Objects), Appearance(Physical Characteristics, Actions and Poses, Clothing and Accessories), Emotion and Atmosphere(Expressions and Emotions, Mood and Tone), Colors and Lighting(Colors, Lighting), Composition(Arrangement, Perspective): "),
+            "tedbench": (lambda src_obj, src_prompt: f"<grounding>Describe this image of {src_obj} in detail. It should cosider Landscape and Background(Natural Elements, Man-made Structures, Weather and Time), Subjects(People, Animals, Objects), Appearance(Physical Characteristics, Actions and Poses, Clothing and Accessories), Emotion and Atmosphere(Expressions and Emotions, Mood and Tone), Colors and Lighting(Colors, Lighting), Composition(Arrangement, Perspective): "),
+        },
+    }
+    prompt_post_processor_dict = {
+        "0": {
+            "CelebA": (lambda caption, src_obj, src_prompt: caption),
+            "sameswap": (lambda caption, src_obj, src_prompt: caption),
+            "tedbench": (lambda caption, src_obj, src_prompt: caption),
+        },
+        "1": {
+            "CelebA": (lambda caption, src_obj, src_prompt: caption.replace(f"Descirbe this image of {src_obj} which has facial features like {src_prompt} in detail: ", "")),
+            "sameswap": (lambda caption, src_obj, src_prompt: caption.replace(f"Describe this image of {src_obj} in detail: ", "")),
+            "tedbench": (lambda caption, src_obj, src_prompt: caption.replace(f"Describe this image of {src_obj} in detail: ", "")),
+        },
+        "2": {
+            "CelebA": (lambda caption, src_obj, src_prompt: caption.replace(f"Descirbe this image of {src_obj} which has facial features like {src_prompt} in detail. It should cosider Landscape and Background(Natural Elements, Man-made Structures, Weather and Time), Subjects(People, Animals, Objects), Appearance(Physical Characteristics, Actions and Poses, Clothing and Accessories), Emotion and Atmosphere(Expressions and Emotions, Mood and Tone), Colors and Lighting(Colors, Lighting), Composition(Arrangement, Perspective): ", "")),
+            "sameswap": (lambda caption, src_obj, src_prompt: caption.replace(f"Describe this image of {src_obj} in detail. It should cosider Landscape and Background(Natural Elements, Man-made Structures, Weather and Time), Subjects(People, Animals, Objects), Appearance(Physical Characteristics, Actions and Poses, Clothing and Accessories), Emotion and Atmosphere(Expressions and Emotions, Mood and Tone), Colors and Lighting(Colors, Lighting), Composition(Arrangement, Perspective): ", "")),
+            "tedbench": (lambda caption, src_obj, src_prompt: caption.replace(f"Describe this image of {src_obj} in detail. It should cosider Landscape and Background(Natural Elements, Man-made Structures, Weather and Time), Subjects(People, Animals, Objects), Appearance(Physical Characteristics, Actions and Poses, Clothing and Accessories), Emotion and Atmosphere(Expressions and Emotions, Mood and Tone), Colors and Lighting(Colors, Lighting), Composition(Arrangement, Perspective): ", "")),
+        }
     }
 
     clip_model, clip_preprocess = clip.load("ViT-B/32", device=args.device)
@@ -505,20 +600,21 @@ if __name__ == "__main__":
         src_obj, tgt_obj = item["object"]
         img_path = item["img_name"].replace('ROOT_DIR/', args.data_dir)
         
-        if args.crop_image:
+        if args.crop_image or args.dataset=="sameswap":
             bbox_o = item["bbox_xywh"] # 순서대료 x, y, w, h 값임
             bbox_o = [bbox_o[0], bbox_o[1], bbox_o[0]+bbox_o[2], bbox_o[1]+bbox_o[3]]
-            org_img = PIL.Image.open(img_path).resize((512,512)).crop(bbox_o)
+            image = PIL.Image.open(img_path).resize((512,512)).crop(bbox_o)
         else:
             image = PIL.Image.open(img_path)
         
 
-        prompt = prompt_dict[args.dataset](src_obj, src_prompt)
-        if "caption" in item:
+        prompt = prompt_dict[str(args.cap_prompt_option)][args.dataset](src_obj, src_prompt)
+        prompt_post_processor = prompt_post_processor_dict[str(args.cap_prompt_option)][args.dataset]
+        if "caption" in item and not args.refresh_caption:
             caption = item["caption"]
             entities = item["entities"]
         else:
-            caption, entities = generated_captions(model, processor, image, prompt)
+            caption, entities = generated_captions(model, processor, image, prompt, prompt_post_processor, src_obj, src_prompt)
             item["caption"] = caption
             item["entities"] = entities
 
