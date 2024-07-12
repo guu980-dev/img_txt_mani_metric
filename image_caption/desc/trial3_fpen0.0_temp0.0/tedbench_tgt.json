@@ -1,0 +1,801 @@
+{
+	"0.png": [
+		"A dog is in a relaxed sitting posture",
+		"A dog is resting on its hind legs",
+		"A dog is sitting on a cozy dog bed",
+		"A dog is sitting in a living room setting",
+		"A dog seems calm and content",
+		"A dog appears to be taking a break"
+	],
+	"1.png": [
+		"A dog is mid-air jumping",
+		"A dog is leaping with all four legs off the ground",
+		"A dog is in a dynamic and playful pose",
+		"A dog is captured in a moment of high energy",
+		"A dog is against a clear sky backdrop",
+		"A dog is not grounded on grass"
+	],
+	"2.png": [
+		"The dog is performing breakdancing moves",
+		"The dog is surrounded by a crowd cheering",
+		"The dog is on a stage with spotlights",
+		"The dog is wearing a breakdancing costume",
+		"The dog is doing a handstand"
+	],
+	"3.png": [
+		"A dog is in a relaxed lying down position",
+		"A dog is indoors on a comfortable surface",
+		"A dog is in a cozy home environment",
+		"A dog is resting peacefully",
+		"A dog is taking a nap"
+	],
+	"4.png": [
+		"A dog is yawning with its mouth wide open",
+		"A dog looks sleepy and tired",
+		"A dog appears relaxed and at ease",
+		"A dog is likely in a cozy environment like a home",
+		"A dog might be getting ready for a nap"
+	],
+	"5.png": [
+		"A tomato is round and red in color",
+		"A tomato is placed on the ground",
+		"A tomato is out of place in a tennis court setting",
+		"A tomato is an unexpected object in a sports environment",
+		"A tomato stands out against the blue tennis court",
+		"A tomato is not a typical sports equipment like a tennis ball"
+	],
+	"6.png": [
+		"A horse has a longer mane compared to a zebra",
+		"A horse has a smoother coat texture than a zebra",
+		"A horse is in a ranch setting",
+		"A horse is in a pasture with green grass",
+		"A horse has a more muscular build than a zebra",
+		"A horse has a different tail shape compared to a zebra"
+	],
+	"7.png": [
+		"A car is in a modern urban setting in Manhattan",
+		"Skyscrapers and cityscape are visible in the background",
+		"A car is surrounded by tall buildings and busy streets",
+		"A car is in a bustling metropolitan area",
+		"A car is in a contemporary city environment",
+		"A car is in a high-traffic area with modern infrastructure"
+	],
+	"8.png": [
+		"A bird is in mid-flight",
+		"A bird is soaring through the sky",
+		"A bird is flying in an open space",
+		"A bird is surrounded by clouds",
+		"A bird's wings are fully extended",
+		"A bird's feathers are spread out"
+	],
+	"9.png": [
+		"A bird is leaning down towards the ground",
+		"A bird is in a different environment than a branch",
+		"A bird is pecking at something on the ground",
+		"A different background is visible behind the bird",
+		"A different angle is captured in the image"
+	],
+	"10.png": [
+		"A bird is preening its feathers",
+		"A bird is near a water source for cleaning",
+		"A bird is surrounded by grooming tools like twigs or leaves",
+		"A bird is bending its neck to reach its feathers",
+		"A bird is using its beak to clean its feathers"
+	],
+	"11.png": [
+		"The box is fully open",
+		"The box reveals its contents completely",
+		"The inside of the box is fully visible",
+		"The box is ready for access or use",
+		"The box is in an unpacking state",
+		"The box is in a state of being explored"
+	],
+	"12.png": [
+		"A cat is wearing a hat",
+		"A cat is dressed up in a fashionable way",
+		"A cat is in a playful or festive setting",
+		"A cat may appear more animated or curious",
+		"The hat adds a pop of color to the image"
+	],
+	"13.png": [
+		"A cat is surrounded by lush green grass",
+		"A cat is in a natural outdoor setting",
+		"A cat is in a fiel",
+		"ossibly a meadow or garden",
+		"A cat is outdoor",
+		"njoying nature",
+		"The grass field provides a soft and natural texture",
+		"The grass field adds depth and dimension to the image"
+	],
+	"14.png": [
+		"A cat is wearing a hat",
+		"The hat on the cat is colorful and stylish",
+		"The cat wearing a hat is in a festive setting",
+		"The cat wearing a hat is in a party environment",
+		"The cat with a hat is standing upright",
+		"The cat with a hat has an alert and attentive stance"
+	],
+	"15.png": [
+		"A cat is wearing an apron",
+		"A cat is engaged in a cooking activity",
+		"A cat is in a kitchen environment",
+		"A cat is surrounded by cooking utensils",
+		"A cat appears focused on cooking"
+	],
+	"16.png": [
+		"A cat is opening its mouth wide in a yawn",
+		"A cat looks sleepy or tired",
+		"A cat might be in a cozy home environment",
+		"A cat could be in a relaxed or comfortable position",
+		"A cat appears to be in a state of relaxation",
+		"A cat seems to be winding down for a nap"
+	],
+	"17.png": [
+		"A dog is smoking a cigar",
+		"A dog is wearing a cigar in its mouth",
+		"A dog is in a smoking lounge",
+		"A dog is surrounded by smoke",
+		"A dog appears relaxed and sophisticated",
+		"A dog exudes a sense of coolness and confidence"
+	],
+	"18.png": [
+		"A dog is in a relaxed sitting posture",
+		"A dog is resting on its hind legs",
+		"A dog is in a calm indoor setting",
+		"A dog is in a cozy living room",
+		"A dog has a relaxed facial expression",
+		"A dog's tail is curled around its body"
+	],
+	"19.png": [
+		"A dog is captured mid-air while jumping",
+		"A dog is leaping with all four legs off the ground",
+		"A dog is in a dynamic and energetic pose",
+		"A dog is in a playful and active setting",
+		"A dog is engaged in a high-energy activity",
+		"A dog is showcasing agility and liveliness"
+	],
+	"20.png": [
+		"The roses are all red in color",
+		"The vase contains only roses",
+		"The roses are neatly arranged in the vase",
+		"The vase has a large number of red roses",
+		"The red color of the roses stands out prominently"
+	],
+	"21.png": [
+		"The vase contains only tulips",
+		"The vase is filled with vibrant colors",
+		"The background is focused on the tulips",
+		"The background is minimalistic to highlight the tulips",
+		"The tulips exhibit a variety of colors",
+		"The tulips are arranged in a colorful pattern"
+	],
+	"22.png": [
+		"The vase contains only daisies",
+		"The daisies have white petals and yellow centers",
+		"The image has a summery feel with daisies as the focal point",
+		"The daisies are arranged in a simple and elegant manner",
+		"The predominant colors are white and yellow from the daisies",
+		"The background is likely to be bright and cheerful to complement the daisies"
+	],
+	"23.png": [
+		"The door is ope",
+		"llowing entry or exit",
+		"The number 13 is visible from the outside",
+		"The surroundings outside the door are partially visible",
+		"Natural light is coming through the open door",
+		"The open door creates a sense of invitation or accessibility"
+	],
+	"24.png": [
+		"The door has the number 17 displayed prominently",
+		"The door is painted in a different color compared to room number 13",
+		"The design of the door is unique and distinct from room number 13",
+		"The door appears larger or smaller than the door for room number 13",
+		"The door is made of a different material than the door for room number 13"
+	],
+	"25.png": [
+		"A couple is holding hand",
+		"howing intimacy",
+		"A couple is walking together on the beach",
+		"The beach scene includes a romantic sunset background",
+		"The couple is standing close to the water's edge",
+		"The couple's hands are intertwine",
+		"howing connection",
+		"The couple's body language indicates closeness and affection"
+	],
+	"26.png": [
+		"A book is fully closed",
+		"Pages of the book are not visible",
+		"The book is not being read",
+		"The book is not in use",
+		"The cover of the book is the main focus",
+		"The book is neatly stacked or placed on a surface"
+	],
+	"27.png": [
+		"A street is filled with people and vehicles",
+		"People are walking and cars are moving in different directions",
+		"A street is bustling with honking and chatter",
+		"Different types of vehicles are present on the street",
+		"The street appears disorganized and hectic",
+		"People of various ages and backgrounds are visible"
+	],
+	"28.png": [
+		"A person is standing with crossed arms",
+		"A person appears confident with crossed arms",
+		"A person's facial expression may convey assertiveness",
+		"A person might be in a defensive posture with crossed arms",
+		"A person's crossed arms may indicate a closed-off demeanor"
+	],
+	"29.png": [
+		"A person is clapping their hands",
+		"A person is showing appreciation or approval",
+		"A person is engaging in a social activity",
+		"A person's face may show joy or excitement",
+		"A person's hands are creating clapping noise",
+		"A person is likely in a crowd or group setting"
+	],
+	"30.png": [
+		"A person is giving a thumbs up sign",
+		"A person has a positive facial expression",
+		"A person seems to be acknowledging something",
+		"A person is expressing approval or agreement",
+		"A person is in a situation where approval is given",
+		"A person is likely responding to something positively"
+	],
+	"31.png": [
+		"Red flowers are visible in the grass",
+		"The grass is filled with vibrant red flowers",
+		"The bear is walking near a colorful floral arrangement",
+		"The scene depicts a contrast between the bear and the bright red flowers",
+		"The red flowers add a pop of color to the green grass",
+		"The image features a mix of blac",
+		"ree",
+		"nd red hues"
+	],
+	"32.png": [
+		"A glass of juice is placed next to the cookie",
+		"The juice is orange in color",
+		"The setting suggests a refreshing snack",
+		"The scene implies a summer or tropical vibe",
+		"The juice appears to be smooth and liquid",
+		"The glass holding the juice is transparent"
+	],
+	"33.png": [
+		"A cat is wearing a floral shirt",
+		"A cat is dressed in a fashionable outfit",
+		"A cat's shirt has a floral design",
+		"A cat is in a tropical or summery environment",
+		"A cat is accessorized with a floral shirt"
+	],
+	"34.png": [
+		"A giraffe has a noticeably shorter neck",
+		"A giraffe has a unique body proportion",
+		"A giraffe with a short neck is in a group of other animals with normal neck lengths",
+		"A giraffe with a short neck is in a zoo enclosure with low hanging branches",
+		"A giraffe with a short neck is in a savannah with tall grass",
+		"A giraffe with a short neck is in a forest with dense foliage"
+	],
+	"35.png": [
+		"A giraffe is bending its neck downwards to reach the grass",
+		"A giraffe is chewing on the grass",
+		"A giraffe is surrounded by shorter grass",
+		"A giraffe is in a grazing position",
+		"A giraffe is in a feeding posture",
+		"A giraffe is interacting with the ground"
+	],
+	"36.png": [
+		"A giraffe is in a relaxed sitting posture",
+		"A giraffe is resting on the ground",
+		"A giraffe is in a peaceful setting",
+		"A giraffe is in a zoo enclosure",
+		"A giraffe is viewed from a lower angle",
+		"A giraffe is seen at eye level"
+	],
+	"37.png": [
+		"A basket filled with oranges",
+		"Oranges are bright orange in color",
+		"Oranges have a bumpy texture",
+		"Oranges are typically associated with citrus fruits",
+		"Oranges are often used for juicing or snacking",
+		"The setting may include orange groves or orchards"
+	],
+	"38.png": [
+		"A bowl is used to hold the apples",
+		"Apples are neatly placed in a circular pattern",
+		"The bowl is placed on a table",
+		"The background is a kitchen counter",
+		"There are fewer apples in the bowl compared to a basket",
+		"The apples are displayed more prominently in the bowl"
+	],
+	"39.png": [
+		"A cat is curled up in a sleeping position",
+		"A cat is resting on a cozy bed",
+		"A cat is napping peacefully in a sunlit room",
+		"A cat is surrounded by a tranquil atmosphere",
+		"A cat is in a state of deep relaxation"
+	],
+	"40.png": [
+		"A cat is standing upright",
+		"A cat is alert and ready to move",
+		"A cat is in a position to pounce",
+		"A cat is in a hunting stance",
+		"A cat's weight is distributed on all four legs",
+		"A cat's body is more elongated compared to sitting posture"
+	],
+	"41.png": [
+		"A cat is mid-air jumping",
+		"A cat is in a playful setting",
+		"A cat is leaping over an obstacle",
+		"A cat is engaged in an energetic activity",
+		"A cat is in a dynamic pose",
+		"A cat is in a state of excitement"
+	],
+	"42.png": [
+		"A cat is looking directly at the camera",
+		"A cat is making eye contact with the viewer",
+		"A cat's face is focused and alert",
+		"A cat seems to be engaging with the photographer",
+		"The cat's attention is on the camera",
+		"The cat appears curious about the camera"
+	],
+	"43.png": [
+		"A cat's back is visible",
+		"A cat's tail is prominently shown",
+		"A cat is in a natural setting",
+		"A cat is outdoors",
+		"A cat is in a playful stance",
+		"A cat is ready to pounce"
+	],
+	"44.png": [
+		"A chair is toppled over",
+		"A chair is in a disarrayed room",
+		"A chair is surrounded by fallen objects",
+		"A chair is in a chaotic environment",
+		"A chair is in a room with signs of struggle",
+		"A chair shows signs of impact or collision"
+	],
+	"45.png": [
+		"A chair is being cut in half with a saw",
+		"A chair is broken into two pieces",
+		"A chair is in the process of being destroyed",
+		"A saw is visible cutting through the chair",
+		"The chair's interior structure is exposed",
+		"The chair is in a workshop or construction site"
+	],
+	"46.png": [
+		"A sitting flamingo has its legs tucked under its body",
+		"A sitting flamingo has a relaxed stance",
+		"A sitting flamingo is on the ground or near water",
+		"A sitting flamingo is in a resting position",
+		"A sitting flamingo may be feeding or resting",
+		"A sitting flamingo is not actively moving or searching for food"
+	],
+	"47.png": [
+		"A photo shows multiple banana slices arranged in a pattern",
+		"A photo displays a sliced banana in a fruit salad",
+		"A photo reveals the soft and fleshy texture of a sliced banana",
+		"A photo indicates the process of preparing a fruit platter",
+		"A photo suggests the addition of sliced bananas to a smoothie",
+		"A photo showcases the contrast between the yellow banana flesh and the white interior"
+	],
+	"48.png": [
+		"The banana is visibly decaying",
+		"The banana skin is mushy and discolored",
+		"The banana has dark spots and patches",
+		"The banana is surrounded by flies or insects",
+		"The background may include a compost bin or trash can",
+		"The banana emits a foul odor"
+	],
+	"49.png": [
+		"A banana is fully peeled and skin is removed",
+		"A banana is exposed and flesh is visible",
+		"A banana has a smooth and shiny surface",
+		"A banana has a uniform texture without any blemishes",
+		"A banana is in a state ready for consumption",
+		"A banana is in a state where it is typically used for cooking or baking"
+	],
+	"50.png": [
+		"A birthday cake has candles for celebration",
+		"A birthday cake has decorations like balloons and confetti",
+		"A birthday cake has 'Happy Birthday' written on it",
+		"A birthday cake has frosting in bright colors",
+		"A birthday cake is tiered with multiple layers",
+		"A birthday cake has a number candle indicating age"
+	],
+	"51.png": [
+		"The tree is barren and lifeless",
+		"The tree is decaying and dried out",
+		"The tree is surrounded by a desolate landscape",
+		"The tree is in a gloomy and eerie setting",
+		"The tree bark is rough and weathered",
+		"The tree branches are twisted and brittle"
+	],
+	"52.png": [
+		"The tree is full of ripe fruits",
+		"The branches are heavy with fruits",
+		"The colors of the fruits are bright and vivid",
+		"The leaves are lush and healthy",
+		"The tree is ready for picking fruits",
+		"The ground is covered with fallen fruits"
+	],
+	"53.png": [
+		"The tree has orange and yellow leaves",
+		"The tree is surrounded by fallen leaves",
+		"The tree is in a forest with autumn colors",
+		"The tree is in a park with people wearing jackets",
+		"The image conveys a sense of nostalgia and change",
+		"The image evokes feelings of transition and transformation"
+	],
+	"54.png": [
+		"A willow tree has lon",
+		"rooping branches",
+		"A willow tree has narro",
+		"longated leaves",
+		"A willow tree is near a body of water",
+		"A willow tree is in a seren",
+		"eaceful setting",
+		"A willow tree has a cascadin",
+		"lowing appearance",
+		"A willow tree has a graceful and elegant silhouette"
+	],
+	"55.png": [
+		"A teddy bear is doing pushups",
+		"A teddy bear is in a gym or workout area",
+		"A teddy bear is on the floor",
+		"A teddy bear shows determination or effort",
+		"A teddy bear is surrounded by exercise equipment"
+	],
+	"56.png": [
+		"A teddy bear is upright and standing tall",
+		"A teddy bear is in a standing pose",
+		"A teddy bear is placed on a flat surface",
+		"A teddy bear is in a room environment",
+		"A teddy bear is balanced on its feet",
+		"A teddy bear is not leaning against anything"
+	],
+	"57.png": [
+		"A teddy bear is in a dancing pose",
+		"A teddy bear is surrounded by disco lights",
+		"A teddy bear is on a dance floor",
+		"A teddy bear is wearing a tutu and ballet shoes",
+		"A teddy bear has its arms raised in the air"
+	],
+	"58.png": [
+		"A teddy bear is ripped apart",
+		"A teddy bear is missing stuffing",
+		"A teddy bear is in a messy room",
+		"A teddy bear is surrounded by torn fabric",
+		"A teddy bear is abandoned",
+		"A teddy bear is in a state of disrepair"
+	],
+	"59.png": [
+		"A horse is in a lush green grass field",
+		"A horse is surrounded by trees and flowers",
+		"The weather is sunny and bright",
+		"There are no snowflakes falling",
+		"The setting is peaceful and serene",
+		"The atmosphere is warm and inviting"
+	],
+	"60.png": [
+		"A horse is leaping over an obstacle",
+		"A horse is in mid-air with all four legs off the ground",
+		"A horse is in a show jumping arena",
+		"A horse is surrounded by jumping equipment like poles and hurdles",
+		"A horse's mane and tail are flowing upwards due to the jump",
+		"A horse's legs are tucked close to its body in a jumping position"
+	],
+	"61.png": [
+		"A cyclist is riding on a smooth asphalt road",
+		"A cyclist is riding in a modern urban setting",
+		"A cyclist is surrounded by tall buildings and cityscape",
+		"A cyclist is in a bustling city environment",
+		"A cyclist is amidst traffic and pedestrians",
+		"A cyclist is in a contemporary street scene"
+	],
+	"62.png": [
+		"A coffee house with outdoor seating is visible",
+		"Coffee cups and saucers are on the tables",
+		"Menu board with coffee options is displayed outside",
+		"A cozy and inviting ambiance is portrayed",
+		"People are seen enjoying their drinks"
+	],
+	"63.png": [
+		"A bird is facing away from the viewer",
+		"A bird's feathers are ruffled in the opposite direction",
+		"A bird is looking at its surroundings behind it",
+		"A bird is positioned in a way that suggests alertness",
+		"A bird's body is twisted to look backwards",
+		"A bird's head is turned over its shoulder"
+	],
+	"64.png": [
+		"A goat and a cat are showing affection by hugging",
+		"A goat and a cat are displaying a bond of friendship",
+		"A goat and a cat are intertwined in a warm embrace",
+		"A goat and a cat are hugging in a cozy environment",
+		"A goat and a cat are nuzzling each other lovingly"
+	],
+	"65.png": [
+		"A bird is holding a fish in its beak",
+		"A bird is near a body of water",
+		"A bird is surrounded by fish in the water",
+		"A fish is being consumed by the bird",
+		"A bird is in a natural habitat near a river or lake"
+	],
+	"66.png": [
+		"A pet entrance is attached to the door",
+		"A pet door is visible on the lower part of the door",
+		"A pet entrance suggests the presence of pets in the household",
+		"A pet entrance indicates a pet-friendly environment",
+		"A pet entrance allows pets to enter and exit the house freely",
+		"A pet entrance provides convenience for pet owners"
+	],
+	"67.png": [
+		"A person is sitting on top of the elephant",
+		"A person is holding onto the elephant's ears",
+		"A person is riding through a jungle on the elephant",
+		"A person is riding the elephant in a parade",
+		"The size contrast between the person and the elephant is evident",
+		"The person riding the elephant is waving to the crowd"
+	],
+	"68.png": [
+		"People are marching in a procession",
+		"People are playing musical instruments",
+		"There are colorful floats and banners",
+		"There is a festive atmosphere with decorations",
+		"Spectators are watching and cheering",
+		"People are waving flags and clapping"
+	],
+	"69.png": [
+		"The road is littered with debris and wreckage",
+		"The road is overgrown with vegetation and nature reclaiming it",
+		"The atmosphere is desolate and abandoned",
+		"The scene evokes a sense of destruction and chaos",
+		"There are abandoned vehicles and structures along the road",
+		"The road is marked with signs of past human activity"
+	],
+	"70.png": [
+		"A race car is moving at high speed",
+		"A race car has aerodynamic features",
+		"A race car is on a race track",
+		"A race car is surrounded by other race cars",
+		"A race car is participating in a race event",
+		"A race car is overtaking other vehicles"
+	],
+	"71.png": [
+		"A unicorn is present in the scene",
+		"A snow princess is depicted",
+		"The scene includes a magical setting",
+		"The image conveys a fairy tale theme",
+		"The snow princess is wearing a crown and elegant gown",
+		"The unicorn has a horn and colorful mane",
+		"The background features a castle or enchanted forest",
+		"The background includes sparkles or magical elements"
+	],
+	"72.png": [
+		"A circus horse is under a big top tent",
+		"A circus horse is surrounded by colorful decorations",
+		"A circus horse is performing tricks",
+		"A circus horse is balancing on a ball",
+		"A circus horse is entertaining a crowd",
+		"A circus horse is under the spotlight"
+	],
+	"73.png": [
+		"A horse is jumping over obstacles in a show jumping event",
+		"A horse is wearing show jumping gear like a saddle and bridle",
+		"A horse is in a show jumping arena with jumps and obstacles",
+		"A horse is surrounded by spectators and judges",
+		"A horse is in a jumping position with legs tucked up",
+		"A horse is focused and alert while jumping"
+	],
+	"74.png": [
+		"The egg is broken and leaking yolk",
+		"The cracked eggshell is jagged and fragmented",
+		"The nest appears disturbed and messy",
+		"The nest material is mixed with eggshell fragments",
+		"The broken egg suggests a failed hatching attempt",
+		"The cracked egg indicates potential danger or threat to the nest"
+	],
+	"75.png": [
+		"Two dogs are showing aggressive behavior",
+		"Two dogs are baring their teeth",
+		"Two dogs are in a confrontational stance",
+		"Two dogs are in a defensive posture",
+		"Two dogs are displaying signs of hostility",
+		"Two dogs are exhibiting signs of tension"
+	],
+	"76.png": [
+		"Pizza is covered with pepperoni slices",
+		"Pizza has red pepperoni contrasting with the cheese",
+		"Pepperoni adds a slightly crispy texture to the pizza",
+		"Pepperoni is arranged in a visually appealing pattern",
+		"Pepperoni adds a savory and slightly spicy taste to the pizza"
+	],
+	"77.png": [
+		"Pizza has pineapple slices as a topping",
+		"Pizza has a yellow and tropical appearance due to pineapple",
+		"Pizza has a sweet and tangy taste from the pineapple",
+		"Pizza has a unique flavor profile compared to traditional pizza toppings",
+		"Pizza has a juicy and soft texture from the cooked pineapple"
+	],
+	"78.png": [
+		"A pizza is missing several slices",
+		"A pizza has toppings scattered around",
+		"A pizza is on a plate with crumbs",
+		"A pizza is on a messy dining table",
+		"A pizza has uneven distribution of toppings",
+		"A pizza has exposed inner layers"
+	],
+	"79.png": [
+		"A person is holding their hands together in a greeting pose",
+		"A person is showing respect with a Namaste hand gesture",
+		"A person is wearing traditional attire",
+		"A person is dressed in cultural clothing",
+		"A person is in a spiritual or cultural setting",
+		"A person is in a yoga or meditation environment"
+	],
+	"80.png": [
+		"A goat is positioned to the right side of the cat",
+		"A goat is facing towards the cat",
+		"A goat is looking at the cat",
+		"A goat is sniffing the cat",
+		"A goat is in a field with the cat",
+		"A goat is in a barn next to the cat"
+	],
+	"81.png": [
+		"A goat is leaping over a cat",
+		"A goat is in mid-air",
+		"A goat and a cat are engaged in playful activity",
+		"A goat and a cat are in a lively outdoor environment",
+		"A cat looks surprised while a goat jumps over it"
+	],
+	"82.png": [
+		"A goat is headbutting a cat",
+		"A goat and a cat are in a confrontation",
+		"A cat looks surprised by the goat's action",
+		"A goat appears aggressive towards the cat",
+		"A farmyard setting with other animals in the background",
+		"A tense atmosphere between the goat and the cat"
+	],
+	"83.png": [
+		"Two bananas are present in the image",
+		"Two bananas are placed side by side",
+		"Two bananas suggest a pair or a comparison",
+		"Two bananas may indicate sharing or abundance",
+		"Two bananas may have a more balanced color composition",
+		"Two bananas may vary in size or ripeness"
+	],
+	"84.png": [
+		"A bear is standing upright",
+		"A bear is in a forest clearing",
+		"A bear is balancing on its hind legs",
+		"A bear is towering over its surroundings",
+		"A bear is surrounded by trees and foliage",
+		"A bear is in a natural habitat"
+	],
+	"85.png": [
+		"A bear is holding a fish in its paws",
+		"A bear is near a river or a stream",
+		"A bear is surrounded by water and rocks",
+		"A fish is being consumed by the bear",
+		"A fish is partially eaten by the bear",
+		"A bear is in a hunting or fishing mode"
+	],
+	"86.png": [
+		"An elephant is in a circus tent surrounded by audience",
+		"An elephant is performing tricks with a trainer",
+		"An elephant is wearing decorative circus attire",
+		"An elephant is balancing on a ball or standing on a pedestal",
+		"An elephant is under colorful circus lights and decorations",
+		"An elephant is in a lively and festive circus environment"
+	],
+	"87.png": [
+		"An elephant is in a circus performance",
+		"An elephant is in a parade",
+		"An elephant is towering over other objects",
+		"An elephant is standing next to a tall tree",
+		"An elephant is balancing on a ball",
+		"An elephant is standing on hind legs"
+	],
+	"88.png": [
+		"The road is filled with vehicles bumper to bumper",
+		"Various types of vehicles are present like car",
+		"ruck",
+		"nd motorcycles",
+		"There is a sense of disorder and confusion due to the congestion",
+		"Traffic signs and signals are visible indicating the jam",
+		"Drivers and passengers appear stressed or impatient",
+		"Exhaust fumes and smog are visible due to the stationary vehicles"
+	],
+	"89.png": [
+		"A convertible car is driving with its top down",
+		"A convertible car is parked with its convertible top open",
+		"A convertible car is associated with sunny weather",
+		"A convertible car is often seen in beach or coastal settings",
+		"A convertible car is considered a luxury vehicle",
+		"A convertible car is designed for open-air driving experience"
+	],
+	"90.png": [
+		"The car design reflects the style of the 1940s",
+		"The car has vintage features from the 1940s",
+		"The background includes elements typical of the 1940s",
+		"The setting resembles a scene from the 1940s",
+		"The car showcases 1940s automotive technology",
+		"The car lacks modern features seen in contemporary cars"
+	],
+	"91.png": [
+		"A teddy bear is holding a cup with its paw",
+		"A cup is being held by a teddy bear",
+		"A teddy bear is in a tea party setting",
+		"A teddy bear is in a cozy room with a cup",
+		"A teddy bear seems to be offering a drink",
+		"A teddy bear is engaging in a tea party scenario"
+	],
+	"92.png": [
+		"An apple tree has fruits hanging from its branches",
+		"An apple tree has a mix of green and red colors",
+		"An apple tree is typically found in an orchard setting",
+		"An apple tree is associated with harvest season",
+		"An apple tree has a mix of smooth leaves and rough bark",
+		"An apple tree has a distinct texture due to the presence of fruits",
+		"An apple tree may have a ladder or basket for fruit picking",
+		"An apple tree may have fallen apples on the ground"
+	],
+	"93.png": [
+		"A horse is raising its head high",
+		"A horse is looking alert and attentive",
+		"A horse is in a field with tall grass",
+		"A horse is under a clear blue sky",
+		"A horse is standing tall and proud",
+		"A horse is not bending down to drink water"
+	],
+	"94.png": [
+		"A horse is standing still",
+		"A horse is in a stable or barn",
+		"A horse is in a horse show ring",
+		"A horse is being groomed or saddled",
+		"A horse is being trained by a rider",
+		"A horse is wearing a bridle or reins"
+	],
+	"95.png": [
+		"A girl is actively engaged in horseback riding",
+		"A girl and a horse are in a partnership",
+		"A girl is holding onto reins while riding",
+		"A girl is riding the horse in an open field",
+		"A girl is riding the horse near a forest trail",
+		"A girl is sitting upright on the horse's back"
+	],
+	"96.png": [
+		"A zebra has black and white stripes",
+		"A zebra has a mane that stands upright",
+		"A zebra is in a savanna habitat",
+		"A zebra is in a herd with other zebras",
+		"A zebra has a unique striped pattern",
+		"A zebra has stripes that extend to its legs"
+	],
+	"97.png": [
+		"The water in the vase is gree",
+		"iving a unique and unusual appearance",
+		"The green water adds a murky and mysterious texture to the overall image",
+		"The green water suggests a creative and artistic approach to floral arrangement",
+		"The green water may symbolize growt",
+		"atur",
+		"r environmental themes",
+		"The green water creates a striking contrast with the flowers and vase",
+		"The green water adds an element of surprise and intrigue to the composition"
+	],
+	"98.png": [
+		"A vase of flowers is displayed",
+		"A vase is filled with colorful flowers",
+		"A vase of flowers is placed on a table",
+		"A vase of flowers is in a bright room",
+		"A vase of flowers has a variety of vibrant colors",
+		"A vase of flowers adds a pop of color to the room"
+	],
+	"99.png": [
+		"Two parrots are showing affection by kissing",
+		"Two parrots are engaging in a romantic gesture",
+		"Two parrots are surrounded by a loving atmosphere",
+		"Two parrots are in a romantic setting",
+		"Two parrots are displaying intimacy through kissing",
+		"Two parrots are expressing love through physical contact"
+	]
+}

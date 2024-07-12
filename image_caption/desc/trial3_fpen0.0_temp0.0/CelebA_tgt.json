@@ -1,0 +1,384 @@
+{
+	"000044.jpg": [
+		"Hair appears untamed and wild",
+		"Hair looks voluminous and full of body",
+		"Hair is frizzy and lacks defined curls",
+		"Hair seems to have a lot of flyaways",
+		"Hair gives a more unkempt and messy look",
+		"Hair appears more free-flowing and less structured"
+	],
+	"000221.jpg": [
+		"Hair is vibrant and colorful",
+		"Hair is styled in a trendy and modern way",
+		"Hair is dyed in multiple bright colors",
+		"Hair is styled in a unique and eye-catching manner",
+		"Hair stands out against the background",
+		"Hair adds a pop of color to the overall look"
+	],
+	"000294.jpg": [
+		"Protruding eyes have a more prominent appearance",
+		"Protruding eyes are more bulging compared to deep-set eyes",
+		"Protruding eyes may appear larger in size",
+		"Protruding eyes may give a bug-eyed impression",
+		"Protruding eyes can convey a sense of alertness or surprise",
+		"Protruding eyes may create a cartoonish or exaggerated look"
+	],
+	"000494.jpg": [
+		"Protruding eyes have a more prominent appearance",
+		"Protruding eyes are more bulging outward",
+		"Protruding eyes may appear larger in size",
+		"Protruding eyes may give a bug-eyed look",
+		"Protruding eyes can convey a sense of alertness or surprise",
+		"Protruding eyes may create a distinctive facial expression"
+	],
+	"000679.jpg": [
+		"Protruding eyes have a more prominent appearance",
+		"Protruding eyes are more bulging outward",
+		"Protruding eyes may appear larger in size",
+		"Protruding eyes may give a bug-eyed impression",
+		"Protruding eyes can convey a startled or intense look",
+		"Protruding eyes may appear more alert or wide-eyed"
+	],
+	"001822.jpg": [
+		"Smooth skin appears soft and even",
+		"Smooth skin lacks wrinkles or fine lines",
+		"Smooth skin may have a uniform tone",
+		"Smooth skin looks youthful and healthy",
+		"Smooth skin reflects light evenly"
+	],
+	"002645.jpg": [
+		"High arch of the eyebrows gives a surprised expression",
+		"High arch of the eyebrows creates a more intense look",
+		"High arch of the eyebrows indicates curiosity or shock",
+		"High arch of the eyebrows conveys a sense of alertness",
+		"High arch of the eyebrows suggests a sense of wonder or disbelief",
+		"High arch of the eyebrows adds a sense of drama to the face"
+	],
+	"002803.jpg": [
+		"Double chin is visible",
+		"Lack of definition in jawline",
+		"Neck appears less elongated",
+		"Jawline is less sharp and prominent",
+		"Chin area shows excess skin or fat accumulation"
+	],
+	"002991.jpg": [
+		"Soft jawline has a gentle curve",
+		"Soft jawline appears less defined",
+		"Soft jawline gives a more delicate look",
+		"Soft jawline is often associated with a softer facial structure",
+		"Soft jawline blends seamlessly into the neck",
+		"Soft jawline creates a more subtle transition from face to neck"
+	],
+	"003038.jpg": [
+		"High arch of the eyebrows gives a surprised expression",
+		"High arch of the eyebrows creates a more intense look",
+		"High arch of the eyebrows indicates curiosity or shock",
+		"High arch of the eyebrows conveys a sense of alertness",
+		"High arch of the eyebrows suggests a sense of wonder or disbelief",
+		"High arch of the eyebrows adds a touch of drama to the face"
+	],
+	"003123.jpg": [
+		"Low jawline indicates a softer facial structure",
+		"Low jawline may suggest a less defined chin",
+		"Low jawline can give a rounder appearance to the face",
+		"Low jawline often creates a more youthful look",
+		"Low jawline may be associated with a less angular face shape"
+	],
+	"003524.jpg": [
+		"Eyes are perfectly circular",
+		"Eyes give a wide-eyed and innocent look",
+		"Eyes appear larger due to their round shape",
+		"Round eyes convey surprise or curiosity",
+		"Round eyes are often associated with cartoon characters"
+	],
+	"004045.jpg": [
+		"Brunette hair is dark brown in color",
+		"Brunette hair appears smooth and shiny",
+		"Brunette hair is styled in loose waves",
+		"Brunette hair is shoulder-length",
+		"Brunette hair may have subtle caramel tones",
+		"Brunette hair complements warm-toned skin"
+	],
+	"004659.jpg": [
+		"Hair strands are sleek and smooth",
+		"Hair strands are aligned in a straight pattern",
+		"Hair appears more polished and neat",
+		"Hair looks more controlled and structured",
+		"Hair has a glossy finish",
+		"Hair reflects light in a linear manner"
+	],
+	"004690.jpg": [
+		"Pale complexion indicates a lack of pink or red undertones",
+		"Pale complexion may appear more matte or less shiny",
+		"Pale complexion can give a more ethereal or ghostly appearance",
+		"Pale complexion may suggest a lack of sun exposure or outdoor activities",
+		"Pale complexion may stand out more against darker backgrounds"
+	],
+	"004952.jpg": [
+		"A person's lips are slightly curved upwards",
+		"A person's smile is subtle",
+		"A person's smile is less noticeable",
+		"A person's smile is restrained",
+		"A person's smile appears reserved",
+		"A person's smile seems polite"
+	],
+	"005751.jpg": [
+		"Teeth are perfectly aligned in a straight line",
+		"Teeth are bright and evenly colored",
+		"Teeth have a uniform and symmetrical appearance",
+		"Teeth are aligned in a neat and orderly manner",
+		"Teeth appear well-maintained and cared for"
+	],
+	"006639.jpg": [
+		"Black hair is dark and lacks vibrant tones",
+		"Black hair appears smooth and shiny",
+		"Black hair is a common natural hair color",
+		"Black hair is often associated with elegance and sophistication",
+		"Black hair contrasts with lighter skin tones"
+	],
+	"006888.jpg": [
+		"Eyes are positioned close to each other",
+		"Eyes give an intense or focused look",
+		"Eyes may convey a sense of seriousness or concentration",
+		"Face may appear more compact or intense",
+		"Close-set eyes can give a different facial symmetry"
+	],
+	"007389.jpg": [
+		"Skin appears smooth and even",
+		"Skin tone is uniform and blemish-free",
+		"Skin looks radiant and healthy",
+		"Skin has a natural glow",
+		"Skin is depicted in a skincare advertisement",
+		"Skin is shown in a beauty product promotion"
+	],
+	"007519.jpg": [
+		"Eyes are positioned close to each other",
+		"Eyes give an intense and focused look",
+		"Eyes convey a sense of concentration",
+		"Eyes appear more connected and centralized on the face",
+		"Close-set eyes may give a serious or stern impression"
+	],
+	"007981.jpg": [
+		"Teeth are perfectly aligned",
+		"Teeth are uniform in size and shape",
+		"Smile appears flawless",
+		"Teeth are symmetrical",
+		"No spaces between teeth",
+		"No visible dental irregularities"
+	],
+	"008055.jpg": [
+		"Eyes are positioned close to each other",
+		"Eyes convey intensity or focus",
+		"Close-set eyes may indicate seriousness or concentration",
+		"Eyes appear narrower due to proximity",
+		"Close-set eyes can give a piercing gaze"
+	],
+	"008183.jpg": [
+		"Black hair is dark and lacks vibrant tones",
+		"Black hair appears smooth and shiny",
+		"Black hair is a common natural hair color",
+		"Black hair is often associated with elegance and sophistication",
+		"Black hair contrasts with light-colored backgrounds"
+	],
+	"008468.jpg": [
+		"The skin appears smooth and taut",
+		"The skin looks flawless and unwrinkled",
+		"The face appears youthful and fresh",
+		"The skin seems well-maintained and firm",
+		"The image conveys a sense of youthfulness and vitality",
+		"The image suggests a focus on skincare and anti-aging"
+	],
+	"008494.jpg": [
+		"A person has a relaxed and content expression",
+		"A person has full cheeks and defined jawline",
+		"A person appears healthy and well-nourished",
+		"A person has a rounded chin and plump lips",
+		"A person is likely depicted in a positive or neutral setting",
+		"A person's appearance suggests a state of well-being"
+	],
+	"008620.jpg": [
+		"The eyes are a light shade of blue",
+		"The eyes have a cool-toned appearance",
+		"The eyes appear bright and clear",
+		"The eyes belong to a person or animal with light blue eyes",
+		"The light blue eyes stand out against the surroundings",
+		"The eyes are set in a face with a contrasting complexion"
+	],
+	"008812.jpg": [
+		"Clear skin appears smooth and even",
+		"Clear skin looks uniform and blemish-free",
+		"Clear skin has a healthy and radiant glow",
+		"Clear skin is often associated with skincare advertisements",
+		"Clear skin is commonly depicted in beauty magazines"
+	],
+	"008900.jpg": [
+		"A person has a smooth and clear skin",
+		"A person looks youthful and fresh",
+		"A person has a clean and polished look",
+		"A person appears neat and tidy",
+		"A person may have used shaving products",
+		"A person's face looks well-maintained"
+	],
+	"009599.jpg": [
+		"A long face has a more elongated structure",
+		"A long face may have a prominent chin",
+		"A long face may have a more pronounced jawline",
+		"Hairstyles for a long face may focus on adding width",
+		"Haircuts for a long face may aim to balance the length",
+		"A long face may give the impression of elegance or sophistication"
+	],
+	"009658.jpg": [
+		"Teeth are aligned in a straight line",
+		"Teeth are evenly spaced and aligned",
+		"Teeth have a uniform and consistent appearance",
+		"Teeth are perfectly aligned and parallel",
+		"Teeth appear well-maintained and properly positioned"
+	],
+	"009910.jpg": [
+		"Eyes are positioned close to each other",
+		"Eyes give an intense and focused look",
+		"Eyes convey a sense of concentration",
+		"Eyes appear more connected and centralized on the face",
+		"Close-set eyes may give a serious or stern impression"
+	],
+	"010577.jpg": [
+		"Protruding eyes have a more prominent appearance",
+		"Protruding eyes are more bulging outward",
+		"Protruding eyes may convey a sense of alertness",
+		"Protruding eyes may appear more wide-eyed",
+		"Protruding eyes may require specific makeup techniques",
+		"Protruding eyes may benefit from highlighting techniques"
+	],
+	"012198.jpg": [
+		"Eyebrows are arched and thin",
+		"Eyebrows are delicate and slender",
+		"Eyebrows are finely groomed",
+		"Eyebrows are more defined and precise",
+		"Eyebrows give a more elegant and sophisticated look",
+		"Eyebrows create a subtle and refined appearance"
+	],
+	"012807.jpg": [
+		"Thick eyebrows create a bold and defined look",
+		"Thick eyebrows frame the face prominently",
+		"Thick eyebrows give a strong and expressive facial appearance",
+		"Thick eyebrows enhance the intensity of the gaze",
+		"Thick eyebrows are a prominent feature in the overall facial aesthetics"
+	],
+	"012810.jpg": [
+		"Receding chin creates a concave profile",
+		"Receding chin may indicate a weak jawline",
+		"Receding chin can make the lower face appear smaller",
+		"Receding chin may lead to less defined facial structure",
+		"Receding chin can affect the overall balance of facial features"
+	],
+	"013108.jpg": [
+		"Brunette hair is dark brown in color",
+		"Brunette hair appears smooth and shiny",
+		"Brunette hair is styled in loose waves",
+		"Brunette hair is shoulder-length",
+		"Brunette hair may have subtle caramel highlights",
+		"Brunette hair may require specific products for maintenance"
+	],
+	"013133.jpg": [
+		"The chin appears less pronounced",
+		"The chin is not the focal point of the face",
+		"The jawline may appear less defined",
+		"The face may have a softer appearance",
+		"The chin may not be as prominent from the side",
+		"The chin may not extend as far forward"
+	],
+	"013251.jpg": [
+		"Double chin is visible",
+		"Lack of definition in jawline",
+		"Neck appears shorter due to double chin",
+		"Jawline is less prominent",
+		"Face looks rounder with double chin",
+		"Jawline is less sharp and defined"
+	],
+	"013461.jpg": [
+		"Skin appears smooth and even",
+		"Skin tone is uniform and blemish-free",
+		"Skin looks radiant and healthy",
+		"Skin is depicted in a skincare advertisement",
+		"Skin is shown against a backdrop of beauty products"
+	],
+	"014564.jpg": [
+		"Clear skin appears smooth and even",
+		"Clear skin looks uniform and blemish-free",
+		"Clear skin has a healthy and radiant glow",
+		"Clear skin is often associated with skincare advertisements",
+		"Clear skin is commonly depicted in beauty magazines"
+	],
+	"014752.jpg": [
+		"Hair is dark black in color",
+		"Hair appears smooth and shiny",
+		"Hair is styled in a sleek manner",
+		"Hair is framing the face elegantly",
+		"Hair contrasts with the backgroun",
+		"aking it stand out"
+	],
+	"015240.jpg": [
+		"A long face has a more elongated structure",
+		"A long face may have a prominent chin",
+		"A long face may have a more pronounced jawline",
+		"A long face may have a narrower width compared to a diamond-shaped face",
+		"Hairstyles for a long face may focus on adding width to balance the length",
+		"Glasses for a long face shape may aim to create the illusion of a shorter face"
+	],
+	"015599.jpg": [
+		"Protruding eyes have a more prominent appearance",
+		"Protruding eyes are more bulging outward",
+		"Protruding eyes may appear larger in size",
+		"Protruding eyes may give a bug-eyed look",
+		"Protruding eyes can convey a sense of alertness or surprise",
+		"Protruding eyes may create a distinctive facial expression"
+	],
+	"015675.jpg": [
+		"Skin appears smooth and even",
+		"Skin tone is uniform and blemish-free",
+		"Skin looks radiant and healthy",
+		"Skin has a natural glow",
+		"Skin is depicted in a skincare advertisement",
+		"Skin is shown in a beauty product commercial"
+	],
+	"016781.jpg": [
+		"A person has a prominent brow ridge",
+		"A person has a more pronounced brow bone",
+		"A person's hairline appears lower on the forehead",
+		"A person's forehead is less visible due to hair covering",
+		"A person's forehead is shorter in height",
+		"A person's forehead is less prominent in the facial structure"
+	],
+	"017014.jpg": [
+		"Eyes are positioned close to each other",
+		"Eyes give an intense and focused look",
+		"Eyes convey a sense of concentration",
+		"Face appears more serious and attentive",
+		"Close-set eyes may indicate a narrower field of vision"
+	],
+	"017050.jpg": [
+		"Hair is light in color",
+		"Hair appears golden or yellowish",
+		"Hair looks shiny and reflective",
+		"Hair may be styled in a different way",
+		"Hair may have highlights or lowlights",
+		"Hair may be associated with a different fashion trend",
+		"Hair may be styled in a more vibrant or bold manner"
+	],
+	"017096.jpg": [
+		"A face has a unique heart shape",
+		"A face has a pointed chin",
+		"A face has a wider forehead",
+		"A face has a narrower jawline",
+		"A face looks more delicate and romantic",
+		"A face may appear more youthful"
+	],
+	"017253.jpg": [
+		"Protruding eyes have a more prominent appearance",
+		"Protruding eyes are more bulging outward",
+		"Protruding eyes may appear larger in size",
+		"Protruding eyes may give a bug-eyed impression",
+		"Protruding eyes can convey a startled or intense look",
+		"Protruding eyes may appear more alert or wide-eyed"
+	]
+}
